@@ -1,0 +1,1 @@
+Xml parser testing on android. Parsing words out of finnish language words.
