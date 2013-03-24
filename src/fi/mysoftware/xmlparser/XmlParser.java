@@ -24,13 +24,12 @@ public class XmlParser {
 	/**
 	 * Initializes a xml parser.
 	 * 
-	 * @param in
-	 *            InputStream in
-	 * @return parser
+	 * @param in InputStream in
 	 * @throws XmlPullParserException
 	 * @throws IOException
+	 * @return arraylist data
 	 */
-	public void parse(InputStream in) {
+	public ArrayList<String> parse(InputStream in, String text) {
 		
 		ArrayList<String> data = new ArrayList<String>();
 		
@@ -53,15 +52,15 @@ public class XmlParser {
                     break;
  
                 case XmlPullParser.TEXT:
-                	if(parser.getText().equals("aakkonen")) {
+                	if(parser.getText().equals(text)) {
                     data.add(parser.getText());
                     Log.d("DAT", "in");
                 	}
                     break;
  
                 case XmlPullParser.END_TAG:
-                    if (tagname.equalsIgnoreCase("employee")) {
-                        data.add("2");
+                    if (tagname.equalsIgnoreCase("")) {
+                        
                     } 
                     break;
  
@@ -79,5 +78,7 @@ public class XmlParser {
 			Log.d("Parser", "Method works");
 			in.close();
 		}*/
+		
+		return data;
 	}
 }

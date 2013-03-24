@@ -4,5 +4,7 @@
     <string name="app_name">XmlParser</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="findbutton">Etsi</string>
+    <string name="wordlabel">Etsi sanaa</string>
 
 </resources>
